@@ -5,7 +5,7 @@ import {questionAnswer, changeQuestion,submit, initQuestion } from './redux/acti
 export default class Actionbar extends React.Component {
 	render() {
 		return (
-			<div> 
+			<div className="actionbar"> 
 
 			<Button nombre = "Anterior" 
 					dispatch = {this.props.dispatch} 

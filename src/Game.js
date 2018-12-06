@@ -10,17 +10,18 @@ export default class Game extends React.Component {
 		console.log(this.props.score)
 		return (
 			<div className="game">
+				<h1 className="titulo">¡Bienvenido a Quizz!</h1>
 
 				<div className="puntuacion" style={{display: this.props.fin ? 'block' : 'none' }}  >
-					<h3> Has aacertado {this.props.score} preguntas </h3>
+					<h3> Has acertado {this.props.score} preguntas </h3>
 				</div>
 
-				<div className="content" style={{display: this.props.fin ? 'none' : 'block' }}>
-					<Content  question = {this.props.question} 
-							  dispatch = {this.props.dispatch} 
-							  currentQ = {this.props.currentQ}
-							  />
-				</div>
+				<Content  question = {this.props.question} 
+						  dispatch = {this.props.dispatch} 
+						  currentQ = {this.props.currentQ}
+						  fin = {this.props.fin}
+						  />
+				
 
 				<div className="actionbar">
 					<Actionbar dispatch = {this.props.dispatch} 

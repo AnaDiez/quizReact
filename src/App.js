@@ -8,11 +8,14 @@ import {questionAnswer, changeQuestion,submit, initQuestion } from './redux/acti
 class App extends Component {
   render() {
         return (
-      <div>
+      
           <Game question= {this.props.questions[this.props.currentQuestion]}
                 dispatch = {this.props.dispatch}
-                currentQ = {this.props.currentQuestion} />
-      </div>
+                currentQ = {this.props.currentQuestion}
+                questions = {this.props.questions}
+                score = {this.props.score} 
+                fin = {this.props.finished} />
+      
     );
   }
 }

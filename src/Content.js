@@ -10,16 +10,19 @@ export default class Content extends React.Component {
 		console.log(this.props.question)
 		return (
 			<div> 
+
 			<Question question = {this.props.question} />
+
 			<Answer question = {this.props.question} 
 					onQuestionAnswer = {(answer) => {
 						this.props.dispatch(questionAnswer(this.props.currentQ, answer))
 					}} 
 					/>
+
 			<Tips question = {this.props.question}/>
 			
+			<img src={this.props.question.attachment.url} width="500" height="300"/>
 			
-			<img src={this.props.question.attachment.url}/>
 			</div>
 			
 		);

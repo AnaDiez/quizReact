@@ -15,6 +15,8 @@ function score(state = 0, action = {}) {
 				}
 			}
 			return puntuacion;
+		case INIT_QUESTIONS:
+			return 0;
 
 		default:
 		  return state;
@@ -24,7 +26,10 @@ function score(state = 0, action = {}) {
 function finished(state = false, action = {}) {
 	switch(action.type) {
 		case SUBMIT:
+			console.log("Estoy en el reducer finished, case SUBMIT")
 			return true;
+		case INIT_QUESTIONS:
+			return false;
 		default:
 		  return state;
 	}
@@ -34,6 +39,8 @@ function currentQuestion(state = 0, action = {}) {
 	switch(action.type) {
 		case CHANGE_QUESTION:
 			return action.payload.index;
+		case INIT_QUESTIONS:
+			return 0;
 		default:
 		  return state;
 	}
@@ -49,6 +56,8 @@ function questions(state = [], action = {}) {
 
 			})
 		case INIT_QUESTIONS:
+			//sacar el json de la request y meterlo en el estado
+			console.log("Estoy en el reducer questions, case INIT_QUESTIONS")
 			return action.payload.questions;	
 		default:
 		  	return state;

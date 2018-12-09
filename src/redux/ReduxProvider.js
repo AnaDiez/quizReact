@@ -1,4 +1,3 @@
-
 import { Provider } from 'react-redux';
 import GlobalState from './reducers';
 import { createStore } from 'redux';
@@ -31,7 +30,9 @@ export default class ReduxProvider extends React.Component {
 	}
 
 	configureStore() {
-		return createStore(GlobalState, this.initialState);
+		return createStore(GlobalState, 
+							this.initialState,
+							);
 
 	}
 }

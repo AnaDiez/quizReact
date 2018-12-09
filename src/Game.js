@@ -11,8 +11,10 @@ export default class Game extends React.Component {
 		return (
 			<div className="game">
 				<h1 className="titulo">¡Bienvenido a Quizz!</h1>
+				<h3 className="titulo"> Tienes 1 minuto para contestar 10 preguntas </h3>
 
 				<div className="puntuacion" style={{display: this.props.fin ? 'block' : 'none' }}  >
+					<h2> ¡TIEMPO! </h2>
 					<h3> Has acertado {this.props.score} preguntas </h3>
 				</div>
 

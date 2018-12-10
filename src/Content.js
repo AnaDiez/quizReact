@@ -8,7 +8,7 @@ import {questionAnswer, changeQuestion,submit, initQuestion } from './redux/acti
 
 export default class Content extends React.Component {
 	render() {
-		console.log(this.props.question)
+		
 		return (
 			<div className="content" style={{display: this.props.fin ? 'none' : 'block' }}>
 				<div className="imagenBloque">

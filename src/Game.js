@@ -7,7 +7,7 @@ import {questionAnswer, changeQuestion,submit, initQuestion } from './redux/acti
 
 export default class Game extends React.Component {
 	render() {
-		console.log(this.props.score)
+
 		return (
 			<div className="game">
 				<h1 className="titulo">¡Bienvenido a Quizz!</h1>

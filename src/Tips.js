@@ -10,7 +10,7 @@ export default class Tips extends React.Component {
 				<h3>Tips:</h3>
 				<h5 style={{display: this.props.question.tips.length ? 'none' : 'block' }}>No hay pistas</h5>
 				{this.props.question.tips.map((tip,index)=>{
-					return <li>{tip}</li>;
+					return <li key={index}>{tip}</li>;
 				})}
 			
 			</div>

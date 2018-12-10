@@ -57,7 +57,6 @@ function questions(state = [], action = {}) {
 			})
 		case INIT_QUESTIONS:
 			//sacar el json de la request y meterlo en el estado
-			console.log("Estoy en el reducer questions, case INIT_QUESTIONS")
 			return action.payload.questions;	
 		default:
 		  	return state;

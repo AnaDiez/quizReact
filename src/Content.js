@@ -2,7 +2,7 @@ import React from 'react';
 import Question from './Question';
 import Answer from './Answer';
 import Tips from './Tips';
-import './App.css';
+import './AppFlux.css';
 
 import {questionAnswer, changeQuestion,submit, initQuestion } from './redux/actions';
 
@@ -10,9 +10,9 @@ export default class Content extends React.Component {
 	render() {
 		
 		return (
-			<div className="content" style={{display: this.props.fin ? 'none' : 'block' }}>
+			<div className="content" style={{display: this.props.fin ? 'none' : 'flex' }}>
 				<div className="imagenBloque">
-				<img src={this.props.question.attachment.url} className="imagenLinea"/> 
+				<img src={this.props.question.attachment.url} className="imagenLinea" /> 
 				</div>
 				<div className="infoPregunta">
 					<Question question = {this.props.question} />

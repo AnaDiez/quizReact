@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import './AppFlux.css';
 import { connect } from 'react-redux';
 import Game from "./Game";
 
